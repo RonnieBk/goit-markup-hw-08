@@ -1,0 +1,13 @@
+$logoColor: #000;
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-size: 26px;
+  line-height: 1.19;
+  color: $logoColor;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  &__word--decorative {
+    color: getColor("selection");
+  }
+}

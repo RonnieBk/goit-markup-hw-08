@@ -1,0 +1,51 @@
+// transition settings
+$default-time: 250ms;
+$default-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+// Colors set
+$colors: (
+  "primary": #212121,
+  "mainBackground": #f5f4fa,
+  "selection": #2196f3,
+  "secondary": #757575,
+  "accent": #fff,
+  "iconColor": #afb1b8,
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+@mixin transition {
+  transition-duration: $default-time;
+  transition-timing-function: $default-timing-function;
+}
+
+@mixin full-transition($transition) {
+  transition-property: $transition;
+  transition-duration: $default-time;
+  transition-timing-function: $default-timing-function;
+}
+
+@mixin border {
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
+%list {
+  padding: 0;
+  margin: 50px 0 0 0;
+}
+
+%list-item {
+  list-style: none;
+  display: inline-block;
+  margin: 0 15px;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}

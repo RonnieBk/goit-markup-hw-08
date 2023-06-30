@@ -1,0 +1,44 @@
+@import "utils/vars";
+@import "components/page-header";
+@import "components/logo";
+@import "components/page-headline";
+@import "components/button";
+@import "components/introduction";
+@import "components/services";
+@import "components/team-members";
+@import "components/our-clients";
+@import "components/portfolio-buttons";
+@import "components/pictures";
+@import "components/footer";
+@import "components/modal";
+
+body {
+  font-family: "Roboto", "Raleway", sans-serif;
+  color: getColor("primary");
+}
+
+.container {
+  width: 1200px;
+  padding-left: 0;
+  margin: 0 auto;
+}
+
+.section {
+  margin: 0;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.headline {
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: inherit;
+  margin: 0;
+}
+
+.icon {
+  display: block;
+  margin: 0 auto;
+}

@@ -1,0 +1,29 @@
+.our-clients {
+  @extend .section;
+  &__headline {
+    @extend .headline;
+  }
+  &__list {
+    @extend %list;
+  }
+  &__item {
+    @extend %list-item;
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid getColor("iconColor");
+    border-radius: 4px;
+    width: 170px;
+    fill: getColor("iconColor");
+    padding: 16px 32px;
+    @include full-transition(border-color);
+    &:hover,
+    &:focus {
+      fill: getColor("selection");
+      border-color: getColor("selection");
+    }
+  }
+  &__icon {
+    @extend .icon;
+    @include full-transition(fill);
+  }
+}

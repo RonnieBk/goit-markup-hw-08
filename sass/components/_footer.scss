@@ -1,0 +1,129 @@
+$backgroundFooter: #2f303a;
+$iconBackground: #ffffff1a;
+$translucentColor: rgba(255, 255, 255, 0.6);
+$translucentColor2: rgba(255, 255, 255, 0.3);
+$boxShadowForm: rgba(0, 0, 0, 0.15);
+
+.footer {
+  padding: 60px 0;
+  background-color: $backgroundFooter;
+  margin: 0 auto;
+  &__container {
+    @extend .container;
+    display: flex;
+    align-items: baseline;
+  }
+  &__logo {
+    color: getColor("accent");
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  &__address {
+    color: getColor("accent");
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+  }
+  &__contact {
+    display: block;
+    color: $translucentColor;
+    @include full-transition(color);
+    &--email {
+      margin: 9px 0;
+    }
+    &--phone {
+      text-decoration: none;
+    }
+    &:hover,
+    &:focus {
+      color: getColor("selection");
+    }
+  }
+}
+
+.join-us {
+  margin-left: 70px;
+  margin-right: 78px;
+  &__text {
+    color: getColor("accent");
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  &__list {
+    @extend %list;
+    margin-top: 20px;
+  }
+  &__item {
+    @extend %list-item;
+    background-color: $iconBackground;
+    cursor: pointer;
+    line-height: 0;
+    margin: 0 5px;
+    padding: 12px;
+    border-radius: 50%;
+    fill: getColor("accent");
+    transition-property: background-color, fill;
+    @include transition;
+    &:hover,
+    &:focus {
+      background-color: getColor("selection");
+      fill: getColor("accent");
+    }
+  }
+}
+
+.signup-form {
+  &__box {
+    display: flex;
+    gap: 12px;
+  }
+  &__label {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: getColor("accent");
+  }
+  &__input {
+    outline: none;
+    padding-left: 16px;
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid $translucentColor2;
+    filter: drop-shadow(0px 4px 4px $boxShadowForm);
+    border-radius: 4px;
+    width: 358px;
+    height: 50px;
+    color: getColor("accent");
+    &:placeholder {
+      letter-spacing: 0.03em;
+      line-height: 1.25;
+      color: $translucentColor;
+    }
+  }
+  &__button {
+    padding-left: 42px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    line-height: 1.87;
+    color: getColor("accent");
+    background: getColor("selection");
+    box-shadow: 0px 4px 4px $boxShadowForm;
+    border-radius: 4px;
+    width: 200px;
+    height: 50px;
+  }
+  &__icon {
+    margin-left: 24px;
+    fill: getColor("accent");
+  }
+}

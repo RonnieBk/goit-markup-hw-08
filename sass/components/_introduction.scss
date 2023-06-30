@@ -1,0 +1,38 @@
+.introduction {
+  @extend .container;
+  padding-top: 94px;
+  &__list {
+    @extend %list;
+    margin: 0;
+  }
+  &__item {
+    @extend %list-item;
+    max-width: 270px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: getColor("primary");
+  }
+  &__headline {
+    margin: 0;
+  }
+  &__text {
+    margin: 10px 0 0;
+    font-weight: 400;
+    line-height: 1.7;
+    text-transform: none;
+    color: getColor("secondary");
+  }
+  &__picture {
+    background-color: getColor("mainBackground");
+    border-radius: 4px;
+    width: 270px;
+    padding: 25px 0;
+    margin-bottom: 30px;
+  }
+  &__icon {
+    @extend .icon;
+  }
+}
