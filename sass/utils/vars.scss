@@ -1,7 +1,3 @@
-// transition settings
-$default-time: 250ms;
-$default-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
 // Colors set
 $colors: (
   "primary": #212121,
@@ -16,6 +12,10 @@ $colors: (
   @return map-get($colors, $key);
 }
 
+// transitions settings
+$default-time: 250ms;
+$default-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 @mixin transition {
   transition-duration: $default-time;
   transition-timing-function: $default-timing-function;
@@ -27,12 +27,14 @@ $colors: (
   transition-timing-function: $default-timing-function;
 }
 
+// random
 @mixin border {
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
 }
 
+// list settings
 %list {
   padding: 0;
   margin: 50px 0 0 0;
@@ -47,5 +49,20 @@ $colors: (
   }
   &:last-child {
     margin-right: 0;
+  }
+}
+
+// Mobile-First
+$mobile: 480px;
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
   }
 }
