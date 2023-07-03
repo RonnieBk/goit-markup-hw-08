@@ -2,24 +2,61 @@ $gradientColor: rgba(47, 48, 58, 0.4);
 $headlineBackgroundColor: #2f303a;
 
 .page-headline {
-  display: none;
   background-color: $headlineBackgroundColor;
   background-image: linear-gradient($gradientColor, $gradientColor),
-    url("../images/background-img.jpg");
+    url("../images/background/backgroundMobile@1x.jpg");
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient($gradientColor, $gradientColor),
+      url("../images/background/backgroundMobile@2x.jpg");
+  }
   background-size: cover;
   background-position: center;
-  width: 1600px;
-  padding: 200px 0;
+  max-width: 480px;
+  height: 400px;
   margin: 0 auto;
+  padding: 118px 0;
+
+  @include tablet {
+    display: block;
+    max-width: 768px;
+    background-image: linear-gradient($gradientColor, $gradientColor),
+      url("../images/background/backgroundTablet@1x.jpg");
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient($gradientColor, $gradientColor),
+        url("../images/background/backgroundTablet@2x.jpg");
+    }
+  }
+  @include desktop {
+    max-width: 1600px;
+    height: auto;
+    padding: 200px 0;
+    background-image: linear-gradient($gradientColor, $gradientColor),
+      url("../images/background/backgroundDesktop@1x.jpg");
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient($gradientColor, $gradientColor),
+        url("../images/background/backgroundDesktop@2x.jpg");
+    }
+  }
   &__name {
     color: getColor("accent");
-    font-size: 44px;
+    font-size: 26px;
     font-weight: 900;
-    line-height: 1.36;
+    line-height: 1.6;
     text-align: center;
-    letter-spacing: 0.06em;
+    letter-spacing: 1.56px;
     text-transform: uppercase;
     margin: 0 0 30px;
+    @include desktop {
+      font-size: 44px;
+      line-height: 1.36;
+      letter-spacing: 2.64px;
+    }
   }
   &__button {
     font-weight: 700;
