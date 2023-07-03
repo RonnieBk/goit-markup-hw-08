@@ -1,11 +1,13 @@
 .our-clients {
-  display: none;
   @extend .section;
   &__headline {
     @extend .headline;
   }
   &__list {
     @extend %list;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   &__item {
     @extend %list-item;
@@ -13,7 +15,7 @@
     display: inline-block;
     border: 1px solid getColor("iconColor");
     border-radius: 4px;
-    width: 170px;
+    width: calc((100% - 30px) / 2);
     fill: getColor("iconColor");
     padding: 16px 32px;
     @include full-transition(border-color);
@@ -22,9 +24,17 @@
       fill: getColor("selection");
       border-color: getColor("selection");
     }
+    @include tablet {
+      width: calc((100% - 60px) / 3);
+    }
+    @include desktop {
+      width: 170px;
+    }
   }
   &__icon {
     @extend .icon;
+    width: 100%;
+    height: auto;
     @include full-transition(fill);
   }
 }
