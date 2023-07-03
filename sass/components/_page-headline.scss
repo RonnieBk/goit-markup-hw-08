@@ -2,7 +2,6 @@ $gradientColor: rgba(47, 48, 58, 0.4);
 $headlineBackgroundColor: #2f303a;
 
 .page-headline {
-  display: none;
   background-color: $headlineBackgroundColor;
   background-image: linear-gradient($gradientColor, $gradientColor),
     url("../images/background/backgroundMobile@1x.jpg");

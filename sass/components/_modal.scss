@@ -3,7 +3,6 @@ $boxShadowModal: 0px 1px 3px rgba(0, 0, 0, 0.12),
 $placeHolder: rgba(117, 117, 117, 0.5);
 
 .modal-backdrop {
-  display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -26,13 +25,16 @@ $placeHolder: rgba(117, 117, 117, 0.5);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: auto;
   background-color: getColor("accent");
   box-shadow: $boxShadowModal;
   border-radius: 4px;
+  @include desktop {
+    width: 528px;
+  }
   &__form {
-    padding: 12px 40px 0;
+    padding: 12px 40px 40px;
   }
   &__button {
     position: absolute;
@@ -48,23 +50,41 @@ $placeHolder: rgba(117, 117, 117, 0.5);
     cursor: pointer;
     width: 30px;
     height: 30px;
+    @include full-transition(fill);
+    &:hover,
+    &:focus {
+      @media screen and (width < $desktop) {
+        fill: getColor("selection");
+      }
+    }
   }
 }
 
 .form {
   &__header {
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.03em;
     padding-top: 40px;
     margin: 0;
+    margin-bottom: 12px;
+    @include desktop {
+      line-height: 1.15;
+    }
   }
   &__label {
     display: block;
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
+    @include full-transition(color);
+    &:hover,
+    &:focus {
+      @media screen and (width < $tablet) {
+        color: getColor("selection");
+      }
+    }
   }
   &__input {
     border: 0;
@@ -112,12 +132,16 @@ $placeHolder: rgba(117, 117, 117, 0.5);
     & .form__icon {
       fill: getColor("selection");
     }
+    & .form__label {
+      // @media screen and (width < $tablet) {
+      color: getColor("selection");
+    }
   }
 }
 
 .form__input--comment {
   height: 120px;
-  width: 448px;
+  width: 100%;
   padding: 12px 16px;
   margin-top: 4px;
   resize: none;
@@ -143,10 +167,14 @@ $placeHolder: rgba(117, 117, 117, 0.5);
   align-items: center;
   margin-top: 20px;
   &__label {
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
+    font-size: 12px;
+    letter-spacing: 0.36px;
     margin-left: 8px;
+    @include desktop {
+      font-size: 14px;
+      line-height: 1.7;
+      letter-spacing: 0.42px;
+    }
   }
   &__checkbox {
     -moz-appearance: none;
@@ -166,8 +194,11 @@ $placeHolder: rgba(117, 117, 117, 0.5);
   }
   &__icon {
     position: absolute;
-    top: 7px;
+    top: 4px;
     left: 3px;
     fill: getColor("accent");
+    @include desktop {
+      top: 7px;
+    }
   }
 }
