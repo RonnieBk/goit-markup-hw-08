@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>homework1</title>
+    <title>homework</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"
       rel="stylesheet"
@@ -18,7 +18,7 @@
   <body>
     <header class="page-header">
       <!-- mobile-header -->
-      <div class="page-header__mobile">
+      <!-- <div class="page-header__mobile">
         <a href="/" class="page-header__logo logo"
           ><span class="logo__word logo__word--decorative">Web</span>Studio</a
         >
@@ -31,9 +31,9 @@
             <use href="./images/icons.svg#icon-menu"></use>
           </svg>
         </button>
-      </div>
+      </div> -->
       <!-- main-header -->
-      <div class="page-header__container container">
+      <div class="page-header__container">
         <div class="page-header__navigation">
           <a href="/" class="page-header__logo logo"
             ><span class="logo__word logo__word--decorative">Web</span>Studio</a
@@ -56,6 +56,15 @@
             </ul>
           </nav>
         </div>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-toggle__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
         <div class="page-header__contacts contacts">
           <a class="contacts__link email" href="mailto:info@devstudio.com">
             <svg class="contacts__icon" width="16" height="12">
@@ -436,30 +445,32 @@
     </footer>
 
     <!-- mobile-menu window -->
-    <div class="menu js-menu-container is-open" id="mobile-menu">
-      <button class="menu__close-btn js-close-menu" type="button">
-        <svg class="menu__icon-close" width="18" height="18">
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="icon-close" width="18" height="18">
           <use href="./images/icons.svg#icon-close-cross"></use>
         </svg>
       </button>
-      <menu class="menu__list">
-        <li class="menu__item">
-          <a href="/agencja" class="menu__link">Agencja</a>
+      <menu class="menu-container__list">
+        <li class="menu-container__item">
+          <a href="/agencja" class="menu-container__link">Agencja</a>
         </li>
-        <li class="menu__item">
-          <a href="portfolio.html" class="menu__link">Portfolio</a>
+        <li class="menu-container__item">
+          <a href="portfolio.html" class="menu-container__link">Portfolio</a>
         </li>
-        <li class="menu__item">
-          <a href="/kontakt" class="menu__link">Kontakt</a>
+        <li class="menu-container__item">
+          <a href="/kontakt" class="menu-container__link">Kontakt</a>
         </li>
       </menu>
-      <div class="menu__contacts">
-        <div class="menu__email-phone">
-          <a class="menu__contact menu__contact--phone" href="+48111111111"
+      <div class="menu-container__contacts">
+        <div class="menu-container__email-phone">
+          <a
+            class="menu-container__contact menu-container__contact--phone"
+            href="+48111111111"
             >+48 111 111 111</a
           >
           <a
-            class="menu__contact menu__contact--email"
+            class="menu-container__contact menu-container__contact--email"
             href="mailto:info@example.com"
             >info@example.com</a
           >
@@ -570,7 +581,13 @@
       </div>
     </div>
 
-    <script scr="./js/mobile-menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

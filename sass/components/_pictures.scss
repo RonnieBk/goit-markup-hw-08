@@ -4,6 +4,7 @@ $borderPictures: 1px solid #eeeeee;
 $overlayColor: rgba(33, 150, 243, 0.9);
 
 .pictures-list {
+  display: none;
   @extend %list;
   display: flex;
   flex-wrap: wrap;

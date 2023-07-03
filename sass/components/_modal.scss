@@ -3,6 +3,7 @@ $boxShadowModal: 0px 1px 3px rgba(0, 0, 0, 0.12),
 $placeHolder: rgba(117, 117, 117, 0.5);
 
 .modal-backdrop {
+  display: none;
   position: fixed;
   left: 0;
   top: 0;
