@@ -1,28 +1,30 @@
 .introduction {
+  display: none;
   @extend .container;
-  padding-top: 60px;
+  padding: 60px 0;
 
+  @include tablet {
+    padding-bottom: 45px;
+  }
   @include desktop {
-    padding-top: 94px;
+    padding: 94px 0 0;
   }
 
   &__list {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    padding: 0;
-    margin: 0;
+    @extend %list;
     @include tablet {
       flex-direction: row;
       flex-wrap: wrap;
     }
     @include desktop {
-      flex-wrap: nowrap;
+      display: block;
+      margin: 50px 0 0 0;
+      padding: 0;
     }
   }
   &__item {
-    list-style: none;
+    @extend %list-item;
+
     max-width: 450px;
     font-weight: 700;
     font-size: 14px;
@@ -30,9 +32,13 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: getColor("primary");
+    @include tablet {
+      max-width: 354px;
+      flex: 50%;
+    }
     @include desktop {
-      @extend %list-item;
       max-width: 270px;
+      margin: 0 15px;
     }
   }
   &__headline {
@@ -48,12 +54,8 @@
   &__picture {
     background-color: getColor("mainBackground");
     border-radius: 4px;
-    max-width: 450px;
     padding: 25px 0;
     margin-bottom: 30px;
-    @include desktop {
-      max-width: 270px;
-    }
   }
   &__icon {
     @extend .icon;

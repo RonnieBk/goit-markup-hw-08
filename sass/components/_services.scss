@@ -2,15 +2,20 @@ $labelBackgroundColor: rgba(47, 48, 58, 0.8);
 
 .services {
   display: none;
+  @include desktop {
+    display: block;
+  }
   @extend .section;
   &__headline {
     @extend .headline;
   }
   &__list {
-    @extend %list;
+    margin: 50px 0 0 0;
+    padding: 0;
   }
   &__item {
     @extend %list-item;
+    margin: 0 15px;
     position: relative;
   }
   &__label {

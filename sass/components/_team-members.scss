@@ -1,5 +1,4 @@
 .team-members {
-  display: none;
   @extend .section;
   background-color: getColor("mainBackground");
   margin: 0 auto;
@@ -8,6 +7,14 @@
   }
   &__list {
     @extend %list;
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    @include desktop {
+      margin: 50px 0 0 0;
+      padding: 0;
+    }
   }
   &__item {
     @extend %list-item;
@@ -21,6 +28,7 @@
   }
   &__image {
     display: block;
+    width: 100%;
   }
   &__title {
     text-align: center;
@@ -39,8 +47,9 @@
 }
 
 .social-media {
-  @extend %list;
-  margin-top: 16px;
+  margin: 16px auto 0;
+  padding: 0;
+
   &__icon {
     @extend %list-item;
     cursor: pointer;
