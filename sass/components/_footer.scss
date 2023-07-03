@@ -5,20 +5,44 @@ $translucentColor2: rgba(255, 255, 255, 0.3);
 $boxShadowForm: rgba(0, 0, 0, 0.15);
 
 .footer {
-  display: none;
   padding: 60px 0;
   background-color: $backgroundFooter;
   margin: 0 auto;
   &__container {
     @extend .container;
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
+    @include desktop {
+      flex-direction: row;
+      align-items: baseline;
+    }
+  }
+  &__contacts-media {
+    @include tablet {
+      display: flex;
+      align-items: baseline;
+      gap: 144px;
+    }
+    @include desktop {
+      gap: 0;
+    }
+  }
+
+  &__contacts {
+    text-align: center;
+    @include desktop {
+      display: block;
+      text-align: left;
+    }
   }
   &__logo {
     color: getColor("accent");
+
     display: inline-block;
     margin-bottom: 20px;
   }
+
   &__address {
     color: getColor("accent");
     font-style: normal;
@@ -44,8 +68,16 @@ $boxShadowForm: rgba(0, 0, 0, 0.15);
 }
 
 .join-us {
-  margin-left: 70px;
-  margin-right: 78px;
+  text-align: center;
+  margin-top: 60px;
+  @include tablet {
+    margin-top: 0;
+  }
+  @include desktop {
+    text-align: left;
+    margin-left: 70px;
+    margin-right: 78px;
+  }
   &__text {
     color: getColor("accent");
     font-weight: 700;
@@ -55,8 +87,8 @@ $boxShadowForm: rgba(0, 0, 0, 0.15);
     text-transform: uppercase;
   }
   &__list {
-    @extend %list;
-    margin-top: 20px;
+    padding: 0;
+    margin: 20px 0 0;
   }
   &__item {
     @extend %list-item;
@@ -78,9 +110,19 @@ $boxShadowForm: rgba(0, 0, 0, 0.15);
 }
 
 .signup-form {
+  text-align: center;
+  @include desktop {
+    text-align: left;
+  }
   &__box {
     display: flex;
-    gap: 12px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    @include desktop {
+      flex-direction: row;
+      gap: 12px;
+    }
   }
   &__label {
     display: block;
@@ -89,8 +131,11 @@ $boxShadowForm: rgba(0, 0, 0, 0.15);
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin: 60px 0 20px;
     color: getColor("accent");
+    @include desktop {
+      margin-top: 0;
+    }
   }
   &__input {
     outline: none;
@@ -100,9 +145,12 @@ $boxShadowForm: rgba(0, 0, 0, 0.15);
     border: 1px solid $translucentColor2;
     filter: drop-shadow(0px 4px 4px $boxShadowForm);
     border-radius: 4px;
-    width: 358px;
+    width: 450px;
     height: 50px;
     color: getColor("accent");
+    @include desktop {
+      width: 358px;
+    }
     &:placeholder {
       letter-spacing: 0.03em;
       line-height: 1.25;
