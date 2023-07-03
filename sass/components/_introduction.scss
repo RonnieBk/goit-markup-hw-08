@@ -1,20 +1,39 @@
 .introduction {
-  display: none;
   @extend .container;
-  padding-top: 94px;
+  padding-top: 60px;
+
+  @include desktop {
+    padding-top: 94px;
+  }
+
   &__list {
-    @extend %list;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 0;
     margin: 0;
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    @include desktop {
+      flex-wrap: nowrap;
+    }
   }
   &__item {
-    @extend %list-item;
-    max-width: 270px;
+    list-style: none;
+    max-width: 450px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: getColor("primary");
+    @include desktop {
+      @extend %list-item;
+      max-width: 270px;
+    }
   }
   &__headline {
     margin: 0;
@@ -29,9 +48,12 @@
   &__picture {
     background-color: getColor("mainBackground");
     border-radius: 4px;
-    width: 270px;
+    max-width: 450px;
     padding: 25px 0;
     margin-bottom: 30px;
+    @include desktop {
+      max-width: 270px;
+    }
   }
   &__icon {
     @extend .icon;
