@@ -133,8 +133,9 @@ $placeHolder: rgba(117, 117, 117, 0.5);
       fill: getColor("selection");
     }
     & .form__label {
-      // @media screen and (width < $tablet) {
-      color: getColor("selection");
+      @media screen and (width < $tablet) {
+        color: getColor("selection");
+      }
     }
   }
 }

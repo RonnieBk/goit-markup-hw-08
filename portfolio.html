@@ -19,18 +19,16 @@
     <header class="page-header">
       <div class="page-header__container">
         <div class="page-header__navigation">
-          <a href="/" class="page-header__logo logo"
+          <a href="index.html" class="page-header__logo logo"
             ><span class="logo__word logo__word--decorative">Web</span>Studio</a
           >
           <nav>
             <ul class="page-header__main-links main-links">
               <li class="main-links__item">
-                <a href="/agencja" class="main-links__link">Agencja</a>
+                <a href="index.html" class="main-links__link">Agencja</a>
               </li>
               <li class="main-links__item">
-                <a
-                  href="portfolio.html"
-                  class="main-links__link main-links__link--active"
+                <a href="/" class="main-links__link main-links__link--active"
                   >Portfolio</a
                 >
               </li>
@@ -111,8 +109,8 @@
                 </div>
                 <img
                   class="picture__image"
-                  srcset="./images/portfolio/imgPortfolio1@2x.jpg 2x"
-                  src="images/img.portfolio.1.jpg"
+                  srcset="images/portfolio/imgPortfolio1@2x.jpg 2x"
+                  src="images/portfolio/img.portfolio.1.jpg"
                   alt="Otwarty laptop na stronie webstudio"
                 />
               </div>
@@ -136,7 +134,7 @@
                 <img
                   class="picture__image"
                   srcset="images/portfolio/imgPortfolio2@2x.jpg 2x"
-                  src="images/img.portfolio.2.jpg"
+                  src="images/portfolio/img.portfolio.2.jpg"
                   alt="Dwóch mężczyzn walczy o piłkę do koszykówki"
                 />
               </div>
@@ -160,7 +158,7 @@
                 <img
                   class="picture__image"
                   srcset="images/portfolio/imgPortfolio3@2x.jpg 2x"
-                  src="images/img.portfolio.3.jpg"
+                  src="images/portfolio/img.portfolio.3.jpg"
                   alt="Nazwa restauracji na tle ryby"
                 />
               </div>
@@ -184,7 +182,7 @@
                 <img
                   class="picture__image"
                   srcset="images/portfolio/imgPortfolio4@2x.jpg 2x"
-                  src="images/img.portfolio.4.jpg"
+                  src="images/portfolio/img.portfolio.4.jpg"
                   alt="Czarne słuchawki na białym tle"
                 />
               </div>
@@ -208,7 +206,7 @@
                 <img
                   class="picture__image"
                   srcset="images/portfolio/imgPortfolio5@2x.jpg 2x"
-                  src="images/img.portfolio.5.jpg"
+                  src="images/portfolio/img.portfolio.5.jpg"
                   alt="Jedno większe białe pudełko i drugie mniejsze brązowe pudełko"
                 />
               </div>
@@ -232,7 +230,7 @@
                 <img
                   class="picture__image"
                   srcset="images/portfolio/imgPortfolio6@2x.jpg 2x"
-                  src="images/img.portfolio.6.jpg"
+                  src="images/portfolio/img.portfolio.6.jpg"
                   alt="Komputer Apple z otwartą stroną internetową"
                 />
               </div>
@@ -256,7 +254,7 @@
                 <img
                   class="picture__image"
                   srcset="images/portfolio/imgPortfolio7@2x.jpg 2x"
-                  src="images/img.portfolio.7.jpg"
+                  src="images/portfolio/img.portfolio.7.jpg"
                   alt="Otwarty dziennik z ładnymi zdjęciami"
                 />
               </div>
@@ -280,7 +278,7 @@
                 <img
                   class="picture__image"
                   srcset="images/portfolio/imgPortfolio8@2x.jpg 2x"
-                  src="images/img.portfolio.8.jpg"
+                  src="images/portfolio/img.portfolio.8.jpg"
                   alt="Etykieta z dużymi literami"
                 />
               </div>
@@ -303,10 +301,9 @@
                 </div>
                 <img
                   class="picture__image"
-                  src="images/img.portfolio.9.jpg"
+                  srcset="images/portfolio/imgPortfolio9@2x.jpg 2x"
+                  src="images/portfolio/img.portfolio.9.jpg"
                   alt="Praca na laptopie"
-                  width="370"
-                  height="294"
                 />
               </div>
               <figcaption class="pictures-list__title">
@@ -390,5 +387,61 @@
         </div>
       </div>
     </footer>
+
+    <!-- mobile-menu window -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="icon-close" width="18" height="18">
+          <use href="./images/icons.svg#icon-close-cross"></use>
+        </svg>
+      </button>
+      <menu class="menu-container__list">
+        <li class="menu-container__item">
+          <a href="/agencja" class="menu-container__link">Agencja</a>
+        </li>
+        <li class="menu-container__item">
+          <a href="portfolio.html" class="menu-container__link">Portfolio</a>
+        </li>
+        <li class="menu-container__item">
+          <a href="/kontakt" class="menu-container__link">Kontakt</a>
+        </li>
+      </menu>
+      <div class="menu-container__contacts">
+        <div class="menu-container__email-phone">
+          <a
+            class="menu-container__contact menu-container__contact--phone"
+            href="+48111111111"
+            >+48 111 111 111</a
+          >
+          <a
+            class="menu-container__contact menu-container__contact--email"
+            href="mailto:info@example.com"
+            >info@example.com</a
+          >
+        </div>
+        <ul class="social-media-mobile">
+          <li class="social-media-mobile__item">
+            <a href="/" class="social-media-mobile__link">Instagram</a>
+          </li>
+          <li class="social-media-mobile__item">
+            <a href="/" class="social-media-mobile__link">Twitter</a>
+          </li>
+          <li class="social-media-mobile__item">
+            <a href="/" class="social-media-mobile__link">Facebook</a>
+          </li>
+          <li class="social-media-mobile__item">
+            <a href="/" class="social-media-mobile__link">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
