@@ -4,31 +4,29 @@ $borderPictures: 1px solid #eeeeee;
 $overlayColor: rgba(33, 150, 243, 0.9);
 
 .pictures-list {
-  display: none;
   @extend %list;
-  display: flex;
-  flex-wrap: wrap;
-  padding-bottom: 94px;
+  margin: 0;
+  padding-bottom: 60px;
+  align-items: center;
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @include desktop {
+    padding: 0 0 94px;
+  }
+
   &__item {
     @extend %list-item;
     @include full-transition(box-shadow);
-    margin: 15px;
     cursor: pointer;
     &:hover,
     &:focus {
       box-shadow: $boxShadowPictures;
     }
-    &:nth-child(-n + 3) {
-      margin-top: 0;
-    }
-    &:nth-child(3n + 3) {
-      margin-right: 0;
-    }
-    &:nth-child(3n + 1) {
-      margin-left: 0;
-    }
-    &:nth-child(-n + 3) {
-      margin-bottom: 0;
+    @media screen and ($tablet <= width <= $desktop) {
+      width: calc((100% - 30px) / 2);
+      // width: 354px;
     }
   }
   &__figure {
@@ -78,5 +76,11 @@ $overlayColor: rgba(33, 150, 243, 0.9);
   }
   &__image {
     display: block;
+    width: 100%;
+    height: auto;
+
+    @include desktop {
+      width: 370px;
+    }
   }
 }

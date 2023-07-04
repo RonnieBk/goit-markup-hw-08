@@ -17,7 +17,7 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__container container">
+      <div class="page-header__container">
         <div class="page-header__navigation">
           <a href="/" class="page-header__logo logo"
             ><span class="logo__word logo__word--decorative">Web</span>Studio</a
@@ -25,9 +25,7 @@
           <nav>
             <ul class="page-header__main-links main-links">
               <li class="main-links__item">
-                <a href="index.html" class="main-links__link main-links__link"
-                  >Agencja</a
-                >
+                <a href="/agencja" class="main-links__link">Agencja</a>
               </li>
               <li class="main-links__item">
                 <a
@@ -42,6 +40,15 @@
             </ul>
           </nav>
         </div>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-toggle__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
         <div class="page-header__contacts contacts">
           <a class="contacts__link email" href="mailto:info@devstudio.com">
             <svg class="contacts__icon" width="16" height="12">
@@ -82,6 +89,11 @@
               Dizajn
             </button>
           </li>
+          <li class="portfolio-buttons__item">
+            <button type="button" class="portfolio-buttons__button">
+              Marketing
+            </button>
+          </li>
         </ul>
       </div>
       <div class="container">
@@ -99,10 +111,9 @@
                 </div>
                 <img
                   class="picture__image"
+                  srcset="./images/portfolio/imgPortfolio1@2x.jpg 2x"
                   src="images/img.portfolio.1.jpg"
                   alt="Otwarty laptop na stronie webstudio"
-                  width="370"
-                  height="294"
                 />
               </div>
               <figcaption class="pictures-list__title">
@@ -124,10 +135,9 @@
                 </div>
                 <img
                   class="picture__image"
+                  srcset="images/portfolio/imgPortfolio2@2x.jpg 2x"
                   src="images/img.portfolio.2.jpg"
                   alt="Dwóch mężczyzn walczy o piłkę do koszykówki"
-                  width="370"
-                  height="294"
                 />
               </div>
               <figcaption class="pictures-list__title">
@@ -149,10 +159,9 @@
                 </div>
                 <img
                   class="picture__image"
+                  srcset="images/portfolio/imgPortfolio3@2x.jpg 2x"
                   src="images/img.portfolio.3.jpg"
                   alt="Nazwa restauracji na tle ryby"
-                  width="370"
-                  height="294"
                 />
               </div>
               <figcaption class="pictures-list__title">
@@ -174,10 +183,9 @@
                 </div>
                 <img
                   class="picture__image"
+                  srcset="images/portfolio/imgPortfolio4@2x.jpg 2x"
                   src="images/img.portfolio.4.jpg"
                   alt="Czarne słuchawki na białym tle"
-                  width="370"
-                  height="294"
                 />
               </div>
               <figcaption class="pictures-list__title">
@@ -199,10 +207,9 @@
                 </div>
                 <img
                   class="picture__image"
+                  srcset="images/portfolio/imgPortfolio5@2x.jpg 2x"
                   src="images/img.portfolio.5.jpg"
                   alt="Jedno większe białe pudełko i drugie mniejsze brązowe pudełko"
-                  width="370"
-                  height="294"
                 />
               </div>
               <figcaption class="pictures-list__title">
@@ -224,10 +231,9 @@
                 </div>
                 <img
                   class="picture__image"
+                  srcset="images/portfolio/imgPortfolio6@2x.jpg 2x"
                   src="images/img.portfolio.6.jpg"
                   alt="Komputer Apple z otwartą stroną internetową"
-                  width="370"
-                  height="294"
                 />
               </div>
               <figcaption class="pictures-list__title">
@@ -249,10 +255,9 @@
                 </div>
                 <img
                   class="picture__image"
+                  srcset="images/portfolio/imgPortfolio7@2x.jpg 2x"
                   src="images/img.portfolio.7.jpg"
                   alt="Otwarty dziennik z ładnymi zdjęciami"
-                  width="370"
-                  height="294"
                 />
               </div>
               <figcaption class="pictures-list__title">
@@ -274,10 +279,9 @@
                 </div>
                 <img
                   class="picture__image"
+                  srcset="images/portfolio/imgPortfolio8@2x.jpg 2x"
                   src="images/img.portfolio.8.jpg"
                   alt="Etykieta z dużymi literami"
-                  width="370"
-                  height="294"
                 />
               </div>
               <figcaption class="pictures-list__title">
@@ -316,48 +320,51 @@
     </main>
     <footer class="footer">
       <div class="footer__container">
-        <div class="footer__contacts">
-          <a class="footer__logo logo" href="index.html"
-            ><span class="logo__word logo__word--decorative">Web</span>Studio</a
-          >
-          <address class="footer__address">
-            m. Warszawa, Aleje Jerozolimskie 21
-            <a
-              class="footer__contact footer__contact--email"
-              href="mailto:info@example.com"
-              >info@example.com</a
+        <div class="footer__contacts-media">
+          <div class="footer__contacts">
+            <a class="footer__logo logo" href="index.html"
+              ><span class="logo__word logo__word--decorative">Web</span
+              >Studio</a
             >
-            <a
-              class="footer__contact footer__contact--phone"
-              href="+48111111111"
-              >+48 111 111 111</a
-            >
-          </address>
-        </div>
-        <div class="footer__social-media join-us">
-          <p class="join-us__text">Dołącz do nas</p>
-          <ul class="join-us__list">
-            <li class="join-us__item">
-              <svg class="join-us__icon icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-instagram-2"></use>
-              </svg>
-            </li>
-            <li class="join-us__item">
-              <svg class="join-us__icon icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-twitter-1"></use>
-              </svg>
-            </li>
-            <li class="join-us__item">
-              <svg class="join-us__icon icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-facebook-1"></use>
-              </svg>
-            </li>
-            <li class="join-us__item">
-              <svg class="join-us__icon icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-linkedin-1"></use>
-              </svg>
-            </li>
-          </ul>
+            <address class="footer__address">
+              m. Warszawa, Aleje Jerozolimskie 21
+              <a
+                class="footer__contact footer__contact--email"
+                href="mailto:info@example.com"
+                >info@example.com</a
+              >
+              <a
+                class="footer__contact footer__contact--phone"
+                href="+48111111111"
+                >+48 111 111 111</a
+              >
+            </address>
+          </div>
+          <div class="footer__social-media join-us">
+            <p class="join-us__text">Dołącz do nas</p>
+            <ul class="join-us__list">
+              <li class="join-us__item">
+                <svg class="join-us__icon icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-instagram-2"></use>
+                </svg>
+              </li>
+              <li class="join-us__item">
+                <svg class="join-us__icon icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-twitter-1"></use>
+                </svg>
+              </li>
+              <li class="join-us__item">
+                <svg class="join-us__icon icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-facebook-1"></use>
+                </svg>
+              </li>
+              <li class="join-us__item">
+                <svg class="join-us__icon icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-linkedin-1"></use>
+                </svg>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="footer__signup-form signup-form">
           <form name="signup_form">
