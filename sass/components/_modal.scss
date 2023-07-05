@@ -26,11 +26,14 @@ $placeHolder: rgba(117, 117, 117, 0.5);
   left: 50%;
   transform: translate(-50%, -50%);
   width: calc(100vw - 30px);
-  max-width: 450px;
+
   height: auto;
   background-color: getColor("accent");
   box-shadow: $boxShadowModal;
   border-radius: 4px;
+  @media screen and (width < $tablet) {
+    max-width: 450px;
+  }
   @include tablet {
     width: 450px;
   }
