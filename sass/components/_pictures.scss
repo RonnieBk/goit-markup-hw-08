@@ -27,6 +27,9 @@ $overlayColor: rgba(33, 150, 243, 0.9);
     @media screen and ($tablet <= width <= $desktop) {
       width: calc((100% - 30px) / 2);
       // width: 354px;
+      &:first-child .pictures-list__title {
+        padding-bottom: 56px;
+      }
     }
   }
   &__figure {
@@ -40,6 +43,7 @@ $overlayColor: rgba(33, 150, 243, 0.9);
     letter-spacing: 0.06em;
     @include border;
   }
+
   &__description {
     margin: 0;
     color: getColor("secondary");

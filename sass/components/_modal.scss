@@ -124,6 +124,18 @@ $placeHolder: rgba(117, 117, 117, 0.5);
   }
 }
 
+.form__wrapper {
+  @media screen and (width < $tablet) {
+    &:focus,
+    &:hover,
+    &:focus-within {
+      & .form__label {
+        color: getColor("selection");
+      }
+    }
+  }
+}
+
 .form__input-icon {
   &:focus,
   &:hover,
@@ -131,11 +143,6 @@ $placeHolder: rgba(117, 117, 117, 0.5);
     border-color: getColor("selection");
     & .form__icon {
       fill: getColor("selection");
-    }
-    & .form__label {
-      @media screen and (width < $tablet) {
-        color: getColor("selection");
-      }
     }
   }
 }
