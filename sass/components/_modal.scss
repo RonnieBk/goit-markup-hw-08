@@ -25,11 +25,15 @@ $placeHolder: rgba(117, 117, 117, 0.5);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 450px;
+  width: calc(100vw - 30px);
+  max-width: 450px;
   height: auto;
   background-color: getColor("accent");
   box-shadow: $boxShadowModal;
   border-radius: 4px;
+  @include tablet {
+    width: 450px;
+  }
   @include desktop {
     width: 528px;
   }
@@ -170,7 +174,6 @@ $placeHolder: rgba(117, 117, 117, 0.5);
 }
 
 .agreement {
-  position: relative;
   display: flex;
   align-items: center;
   margin-top: 20px;
@@ -184,12 +187,17 @@ $placeHolder: rgba(117, 117, 117, 0.5);
       letter-spacing: 0.42px;
     }
   }
+  &__wrapper {
+    position: relative;
+    width: 16px;
+    height: 16px;
+  }
   &__checkbox {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
     cursor: pointer;
-    height: 15px;
+    height: 16px;
     width: 16px;
     border: 2px solid getColor("primary");
     border-radius: 2px;
@@ -202,8 +210,9 @@ $placeHolder: rgba(117, 117, 117, 0.5);
   }
   &__icon {
     position: absolute;
-    top: 4px;
-    left: 3px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     fill: getColor("accent");
     @include desktop {
       top: 7px;
