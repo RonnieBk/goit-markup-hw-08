@@ -14,6 +14,7 @@
   justify-content: space-between;
   &__list {
     list-style: none;
+    margin: 0;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -36,6 +37,9 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
+  }
+  &__contacts {
+    width: 100vw;
   }
   &__contact {
     font-family: inherit;
@@ -67,8 +71,10 @@
 .social-media-mobile {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin-top: 64px;
+  width: 100vw;
   &__item {
     border-right: 1px solid rgba(33, 33, 33, 0.2);
     &:last-child {
