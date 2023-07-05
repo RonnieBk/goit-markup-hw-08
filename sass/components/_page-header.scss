@@ -34,6 +34,7 @@ $headerBottomColor: #ececec;
   }
   &__main-links {
     display: none;
+    margin: 0;
     padding: 0;
     @include tablet {
       display: block;
